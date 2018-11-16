@@ -431,9 +431,9 @@ ${prefix}help-en
      
             اختر:
  
-.help-gn-ar  ⇏ اوامر عامة
+$help-gn-ar  ⇏ اوامر عامة
 
-.help-ad-ar  ⇏ اوامر ادارة السيرفر
+$help-ad-ar  ⇏ اوامر ادارة السيرفر
              
 `)
 message.channel.sendEmbed(embed)
@@ -449,9 +449,9 @@ client.on("message", message => {
          
               Chose:
                
-   .help-gn-en  ⇏ General commands
+   $help-gn-en  ⇏ General commands
    
-   .help-ad-en  ⇏ Server management commands
+   $help-ad-en  ⇏ Server management commands
                
    
    
@@ -470,15 +470,15 @@ client.on("message", message => {
       .setDescription(`
              
 ===================== اوامر عامة =====================
-.new ➾ لفتح تكت 
-.close ➾ لاغلاق التكت
-.id  ➾ معلومات عن حسابك
-.avatar ➾ يظهر صورة بروفابلك
-.server ➾ معلومات عن السيرفر
-.bot ➾ معلومات عن البوت
-.ping  ➾ لمعرفة سرعة نتك
-.trg ➾ لعبة ترجمه
-.say ➾
+$new ➾ لفتح تكت 
+$close ➾ لاغلاق التكت
+$id  ➾ معلومات عن حسابك
+$avatar ➾ يظهر صورة بروفابلك
+$server ➾ معلومات عن السيرفر
+$bot ➾ معلومات عن البوت
+$ping  ➾ لمعرفة سرعة نتك
+$trg ➾ لعبة ترجمه
+$say ➾
 =========================================================
 وقريباً المزيد من الاكواد
 =========================================================
@@ -501,15 +501,15 @@ client.on("message", message => {
       .setDescription(`
              
 ==================== General commands =====================
-.new ➾ open ticket
-.close ➾ close ticket
-.id ➾ your informations
-.ping ➾ your ping
-.avatar ➾ your profile avatar
-.server ➾ server informations
-.bot ➾ bot informations
-.trg ➾ traduction game
-.say ➾ the bot say your message
+$new ➾ open ticket
+$close ➾ close ticket
+$id ➾ your informations
+$ping ➾ your ping
+$avatar ➾ your profile avatar
+$server ➾ server informations
+$bot ➾ bot informations
+$trg ➾ traduction game
+$say ➾ the bot say your message
 =========================================================
 More commands soon
 =========================================================
@@ -528,16 +528,16 @@ More commands soon
       .setDescription(`
              
 ==================== اوامر ادارية =====================
-.ban [@mention] [reason] ➾  لحظر شخص من السيرفر
-.kick [@mention] [reason] ➾ لطرد شخص من السيرفر
-.mute  [@mention] [reason] ➾ لاعطاء ميوت لعضو
-.unmute [@mention] ➾ لفك الميوت عن عضو
-.move [@mention] ➾ لنقل عضو لرومك الصوتي
-.mutechannel ➾ لاقفال الشات
-.unmutechannel ➾ لفتح الشات
-.delete #channel ➾ لمحو الشات
-.clear  ➾ لمسح الشات
-.role [@mention] [role name] ➾ لاعطاء رتبة لعضو
+$ban [@mention] [reason] ➾  لحظر شخص من السيرفر
+$kick [@mention] [reason] ➾ لطرد شخص من السيرفر
+$mute  [@mention] [reason] ➾ لاعطاء ميوت لعضو
+$unmute [@mention] ➾ لفك الميوت عن عضو
+$move [@mention] ➾ لنقل عضو لرومك الصوتي
+$mutechannel ➾ لاقفال الشات
+$unmutechannel ➾ لفتح الشات
+$delete #channel ➾ لمحو الشات
+$clear  ➾ لمسح الشات
+$role [@mention] [role name] ➾ لاعطاء رتبة لعضو
 =========================================================
 وقريباً المزيد من الاكواد
 =========================================================
@@ -556,16 +556,16 @@ const embed = new Discord.RichEmbed()
    .setDescription(`
          
 ==================== Management commands =====================
-.ban [@mention] [reason] ➾ to ban someone from the server
-.kick [@mention] [reason] ➾ to kick someone from the server
-.mute [@mention] [reason] ➾ to mute someone
-.unmute [@mention] ➾ to umnute someone
-.move [@mention] ➾ to move someone to your channel
-.mutechannel ➾ to mute chat
-.unmutechannel ➾ to ummute chat
-.delete #channel ➾ to delete chat
-.clear ➾ to clear chat
-.role [@mention] [role name] ➾ to give role fo someone
+$ban [@mention] [reason] ➾ to ban someone from the server
+$kick [@mention] [reason] ➾ to kick someone from the server
+$mute [@mention] [reason] ➾ to mute someone
+$unmute [@mention] ➾ to umnute someone
+$move [@mention] ➾ to move someone to your channel
+$mutechannel ➾ to mute chat
+$unmutechannel ➾ to ummute chat
+$delete #channel ➾ to delete chat
+$clear ➾ to clear chat
+$role [@mention] [role name] ➾ to give role fo someone
 =========================================================
 More commands soon
 =========================================================
