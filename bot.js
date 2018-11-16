@@ -87,7 +87,7 @@ client.on('guildMemberAdd', member => {
 
 client.on('message', message => {
 
-    if (message.content === ".mutechannel") {
+    if (message.content === "$mutechannel") {
                         if(!message.channel.guild) return message.reply(' This command only for servers');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -99,7 +99,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
            });
              }
 
-if (message.content === ".unmutechannel") {
+if (message.content === "$unmutechannel") {
     if(!message.channel.guild) return message.reply(' This command only for servers');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -256,7 +256,7 @@ client.on('message', message => {
 });
 
 client.on("message", msg => {
-  if(msg.content === '.' + "id") {
+  if(msg.content === '$' + "id") {
       const embed = new Discord.RichEmbed();
   embed.addField("🔱| اسم الحساب :", `${msg.author.username}#${msg.author.discriminator}`, true)
           .addField("🆔| الاي دي :", `${msg.author.id}`, true)
@@ -380,7 +380,7 @@ client.on('message', message => {
 
 
 const adminprefix = "$";
-const devs = ['383711936174620672','481213742109949972','480738319899295795'];
+const devs = ['490218220280872980'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -408,7 +408,7 @@ if (message.content.startsWith(adminprefix + 'st')) {
 
 client.on("message", message => {
     var prefix = "$";
- if (message.content === ".help") {
+ if (message.content === "$help") {
   const embed = new Discord.RichEmbed()  
       .setColor("RANDOM")
       .setDescription(`
@@ -424,7 +424,7 @@ ${prefix}help-en
    });
  
    client.on("message", message => {
- if (message.content === ".help-ar") {
+ if (message.content === "$help-ar") {
   const embed = new Discord.RichEmbed()  
       .setColor("RANDOM")
       .setDescription(`
@@ -442,7 +442,7 @@ message.channel.sendEmbed(embed)
 });
  
 client.on("message", message => {
-    if (message.content === ".help-en") {
+    if (message.content === "$help-en") {
      const embed = new Discord.RichEmbed()  
          .setColor("RANDOM")
          .setDescription(`
@@ -463,7 +463,7 @@ client.on("message", message => {
  
    client.on("message", message => {
     var prefix = "$";
- if (message.content === ".help-gn-ar") {
+ if (message.content === "$help-gn-ar") {
      message.channel.send('**تم ارسال رسالة في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
@@ -494,7 +494,7 @@ client.on("message", message => {
  
    client.on("message", message => {
     var prefix = "$";
- if (message.content === ".help-gn-en") {
+ if (message.content === "$help-gn-en") {
      message.channel.send('**Check your dm** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
@@ -521,7 +521,7 @@ More commands soon
  
    client.on("message", message => {
     var prefix = "$";
- if (message.content === ".help-ad-ar") {
+ if (message.content === "$help-ad-ar") {
      message.channel.send('**تم ارسال رسالة بالخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
@@ -549,7 +549,7 @@ More commands soon
  
 client.on("message", message => {
  var prefix = "$";
-if (message.content === ".help-ad-en") {
+if (message.content === "$help-ad-en") {
   message.channel.send('**Check your dm** :mailbox_with_mail: ');
 const embed = new Discord.RichEmbed()
    .setColor("RANDOM")
@@ -881,7 +881,7 @@ client.on('message', message => {
 });
 
 client.on('message', message =>{
-    if(message.content === '.ping'){
+    if(message.content === '$ping'){
 let start = Date.now(); message.channel.send('pong').then(message => { 
 message.edit(`\`\`\`js
 Time taken: ${Date.now() - start} ms
@@ -891,7 +891,7 @@ Discord API: ${client.ping.toFixed(0)} ms\`\`\``);
 });
 
 client.on('message', msg => {
- if(msg.content === ".bot") {
+ if(msg.content === "$bot") {
 let embed24 = new Discord.RichEmbed()   
    .setThumbnail(client.user.avatarURL)
    .setColor("RANDOM")  
@@ -1038,9 +1038,9 @@ client.on("message", (message) => {
   if (message.content.startsWith("$close")) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
-       message.channel.send(`هل انت متأكد من اقفالك للتذكرة اذا متأكد اكتب .confirm`)
+       message.channel.send(`هل انت متأكد من اقفالك للتذكرة اذا متأكد اكتب $confirm`)
            .then((m) => {
-               message.channel.awaitMessages(response => response.content === '.confirm', {
+               message.channel.awaitMessages(response => response.content === '$confirm', {
                        max: 1,
                        time: 10000,
                        errors: ['time'],
@@ -1078,15 +1078,6 @@ client.on('message', message => {
   
 
 
-client.on('ready', () => {
-   console.log(`----------------`);
-      console.log(`Desert Bot- Script By : EX Clan`);
-        console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
-    console.log(`----------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`$help `,"http://twitch.tv/Death Shop")
-client.user.setStatus("dnd")
-});
+
 
 client.login(process.env.BOT_TOKEN);
